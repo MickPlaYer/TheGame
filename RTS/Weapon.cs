@@ -1,5 +1,4 @@
-﻿
-namespace TheGame.RTS
+﻿namespace TheGame.RTS
 {
     class Weapon
     {

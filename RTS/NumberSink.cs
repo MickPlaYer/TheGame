@@ -1,5 +1,4 @@
-﻿
-namespace TheGame.RTS
+﻿namespace TheGame.RTS
 {
     class NumberSink
     {
@@ -28,13 +27,13 @@ namespace TheGame.RTS
         public int MaxValue
         {
             get { return _maxValue; }
-            set 
+            set
             {
                 if (MaxValue <= 0)
                     throw new System.Exception("MaxValue cant't less then 0.");
                 if (value < _value)
                     _value = value;
-                _maxValue = value; 
+                _maxValue = value;
             }
         }
 

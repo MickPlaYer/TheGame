@@ -1,5 +1,4 @@
-﻿
-namespace TheGame.RTS.Effects
+﻿namespace TheGame.RTS.Effects
 {
     class Damage : Effect
     {

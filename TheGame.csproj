@@ -53,7 +53,6 @@
     <Compile Include="Engine\GameStateEnd.cs" />
     <Compile Include="Engine\GameStateInitial.cs" />
     <Compile Include="Engine\GameStateRun.cs" />
-    <Compile Include="Engine\IGameState.cs" />
     <Compile Include="Engine\KeyboardInput.cs" />
     <Compile Include="Engine\LoadingBar.cs">
       <SubType>Form</SubType>

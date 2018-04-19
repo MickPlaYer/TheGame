@@ -1,5 +1,4 @@
-﻿
-namespace TheGame.RTS.Actions
+﻿namespace TheGame.RTS.Actions
 {
     class Stop : Action
     {

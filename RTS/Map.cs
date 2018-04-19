@@ -163,7 +163,7 @@ namespace TheGame.RTS
             {
                 double length = GameMath.Distance(_units[i].Position, destination);
                 if (length <= _units[i].Radius)
-                        return _units[i];
+                    return _units[i];
             }
             return null;
         }

@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace TheGame.RTS.Actions
+﻿namespace TheGame.RTS.Actions
 {
     class Attack : TargetAction
     {

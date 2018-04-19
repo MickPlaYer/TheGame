@@ -16,9 +16,9 @@ namespace TheGame.RTS
 
         public UnitView(string name)
         {
-            try {_bitmap.LoadBitmap(PATH + name + PNG);}
+            try { _bitmap.LoadBitmap(PATH + name + PNG); }
             catch { _bitmap = _basicView.Bitmap; }
-            try {_outline.LoadBitmap(PATH + name + OUTLINE + PNG);}
+            try { _outline.LoadBitmap(PATH + name + OUTLINE + PNG); }
             catch { _outline = _basicView.Outline; }
             try { _sign.LoadBitmap(PATH + name + SIGN + PNG); }
             catch { _sign = _basicView.Sign; }

@@ -223,12 +223,12 @@ namespace TheGame.RTS
 
         public bool IsMoving
         {
-            get 
+            get
             {
                 if (_actionDoing.Count == 0)
                     return false;
                 else
-                    return !(_actionDoing[0] is Actions.Stop); 
+                    return !(_actionDoing[0] is Actions.Stop);
             }
         }
 

@@ -8,6 +8,8 @@ namespace TheGame.Engine
         private string _mouseTest = "Mouse Test";
         private string _keyUpTest = "Key Up Test";
         private string _keyDownTest = "Key Down Test";
+        private SolidBrush _whiteBrush = new SolidBrush(Color.White);
+        private Font _font = new Font("MS Sans Serif", 50);
 
         // 建構式
         public GameStateInitial(Game game)
@@ -29,13 +31,12 @@ namespace TheGame.Engine
 
         public override void Draw()
         {
-            Game.Graphics.DrawString(_count.ToString(), SystemFonts.DefaultFont, new SolidBrush(Color.White), 10, 10);
-            Game.Graphics.DrawString("GameStateInitial", SystemFonts.DefaultFont, new SolidBrush(Color.White), 10, 25);
-            Game.Graphics.DrawString(_mouseTest, SystemFonts.DefaultFont, new SolidBrush(Color.White), 10, 40);
-            Game.Graphics.DrawString(_keyUpTest, SystemFonts.DefaultFont, new SolidBrush(Color.White), 10, 55);
-            Game.Graphics.DrawString(_keyDownTest, SystemFonts.DefaultFont, new SolidBrush(Color.White), 10, 70);
-            Font font = new Font("myfont", 50);
-            Game.Graphics.DrawString("Press Space to Start", font, new SolidBrush(Color.White), 300, 300);
+            Game.Graphics.DrawString(_count.ToString(), SystemFonts.DefaultFont, _whiteBrush, 10, 10);
+            Game.Graphics.DrawString("GameStateInitial", SystemFonts.DefaultFont, _whiteBrush, 10, 25);
+            Game.Graphics.DrawString(_mouseTest, SystemFonts.DefaultFont, _whiteBrush, 10, 40);
+            Game.Graphics.DrawString(_keyUpTest, SystemFonts.DefaultFont, _whiteBrush, 10, 55);
+            Game.Graphics.DrawString(_keyDownTest, SystemFonts.DefaultFont, _whiteBrush, 10, 70);
+            Game.Graphics.DrawString("Press Space to Start", _font, _whiteBrush, 100, 300);
         }
 
         public override void OnKeyUp(string key)

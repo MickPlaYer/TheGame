@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using TheGame.Engine;
+using TheGame.RTS;
 
 namespace TheGame
 {
@@ -14,7 +16,13 @@ namespace TheGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            GameWindow gameWindow = new GameWindow();
+            List<Type> gameStateTypes = new List<Type>
+            {
+                typeof(GameStateInitial),
+                typeof(GameStateRun),
+                typeof(GameStateEnd),
+            };
+            GameWindow gameWindow = new GameWindow(gameStateTypes);
             if (gameWindow.IsLoadFail)
                 MessageBox.Show("Game load fail!");
             else

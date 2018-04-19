@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
-using TheGame.RTS;
+using TheGame.Engine;
 
-namespace TheGame.Engine
+namespace TheGame.RTS
 {
     class GameStateRun : GameState
     {

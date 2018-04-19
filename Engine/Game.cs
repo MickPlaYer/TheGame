@@ -16,13 +16,11 @@ namespace TheGame.Engine
         private bool _isRunning = true;
 
         // 建構式
-        public Game(LoadingProgressChangedEventHandler loadWorkerDoReportProgress)
+        public Game(List<Type> _gameStateTypes, LoadingProgressChangedEventHandler loadWorkerDoReportProgress)
         {
             _loadingProgressChanged += loadWorkerDoReportProgress;
             _cursor = new GameCursor();
-            _gameStateList.Add(new GameStateInitial(this));
-            _gameStateList.Add(new GameStateRun(this));
-            _gameStateList.Add(new GameStateEnd(this));
+            _gameStateTypes.ForEach(type => _gameStateList.Add((GameState)Activator.CreateInstance(type, this)));
             _gameState = 0;
         }
 

@@ -52,7 +52,6 @@
     <Compile Include="Engine\GameState.cs" />
     <Compile Include="Engine\GameStateEnd.cs" />
     <Compile Include="Engine\GameStateInitial.cs" />
-    <Compile Include="Engine\GameStateRun.cs" />
     <Compile Include="Engine\KeyboardInput.cs" />
     <Compile Include="Engine\LoadingBar.cs">
       <SubType>Form</SubType>
@@ -90,6 +89,7 @@
     <Compile Include="RTS\CommandTable.cs" />
     <Compile Include="RTS\Effect.cs" />
     <Compile Include="RTS\Effects\Damage.cs" />
+    <Compile Include="RTS\GameStateRun.cs" />
     <Compile Include="RTS\Map.cs" />
     <Compile Include="RTS\NumberSink.cs" />
     <Compile Include="RTS\TargetAction.cs" />

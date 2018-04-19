@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
@@ -14,11 +15,13 @@ namespace TheGame.Engine
         private KeyboardInput _keyboardInput = new KeyboardInput();
         private Point _mousePosition = Point.Empty;
         private LoadingBar _loadingBar;
+        private List<Type> _gameStateTypes;
         private Game _game;
 
-        public GameWindow()
+        public GameWindow(List<Type> gameStateTypes)
         {
             InitializeComponent();
+            _gameStateTypes = gameStateTypes;
             _loadingBar = new LoadingBar();
             _LoadWorker.RunWorkerAsync();
             _loadingBar.ShowDialog();
@@ -51,6 +54,33 @@ namespace TheGame.Engine
                     Thread.Sleep(new TimeSpan(TIME_PER_FRAME) - _delta);
             }
         }
+
+        // 使用BackgroungWorker來載入遊戲
+        private void LoadForm(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                _game = new Game(_gameStateTypes, _LoadWorker.ReportProgress);
+            }
+            catch (Exception exception)
+            {
+                _loadingBar.IsLoadFail = true;
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        // BackgroungWorker回報遊戲載入的進度
+        private void LoadProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            _loadingBar.SetValue(e.ProgressPercentage);
+        }
+
+        // BackgroungWorker回報遊戲載入完成
+        private void LoadCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            _loadingBar.Close();
+        }
+
 
         // 處理鍵盤事件
         private void OnKeyInput()
@@ -88,32 +118,6 @@ namespace TheGame.Engine
         private void OnFormResize(object sender, EventArgs e)
         {
             _game.OnFormResize(this.ClientSize);
-        }
-
-        // 使用BackgroungWorker來載入遊戲
-        private void LoadForm(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                _game = new Game(_LoadWorker.ReportProgress);
-            }
-            catch (Exception exception)
-            {
-                _loadingBar.IsLoadFail = true;
-                MessageBox.Show(exception.Message);
-            }
-        }
-
-        // BackgroungWorker回報遊戲載入的進度
-        private void LoadProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            _loadingBar.SetValue(e.ProgressPercentage);
-        }
-
-        // BackgroungWorker回報遊戲載入完成
-        private void LoadCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            _loadingBar.Close();
         }
 
         // 當滑鼠進入視窗時鎖定滑鼠的移動範圍

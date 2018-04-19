@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Weapons>
+	<Weapon name = "basic">
+		<Damage value = "1"/>
+		<Range value = "300"/>
+		<Interval value = "60"/>
+	</Weapon>
+</Weapons>

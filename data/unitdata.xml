@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Units>
+	<Unit name = "marine">
+		<Anchor width = "16" height = "16"/>
+		<Radius value = "10"/>
+		<HitPoint value = "40"/>
+		<MoveSpeed value = "5"/>
+	</Unit>
+	<Unit name = "tank">
+		<Anchor width = "28" height = "40"/>
+		<Radius value = "20"/>
+		<HitPoint value = "100"/>
+		<MoveSpeed value = "6"/>
+	</Unit>
+	<Unit name = "marauder">
+		<Anchor width = "23" height = "27"/>
+		<Radius value = "15"/>
+		<HitPoint value = "60"/>
+		<MoveSpeed value = "5"/>
+	</Unit>
+</Units>

@@ -1,0 +1,69 @@
+<CUnit id="Marine">
+  <DeathRevealRadius value="3"/>
+  <Race value="Terr"/>
+  <Mob value="Multiplayer"/>
+  <LifeStart value="45"/>
+  <LifeMax value="45"/>
+  <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+  <Speed value="2.25"/>
+  <Acceleration value="1000"/>
+  <LateralAcceleration value="46.0625"/>
+  <StationaryTurningRate value="999.8437"/>
+  <TurningRate value="999.8437"/>
+  <Food value="-1"/>
+  <CostCategory value="Army"/>
+  <FlagArray index="PreventDestroy" value="1"/>
+  <FlagArray index="UseLineOfSight" value="1"/>
+  <FlagArray index="ArmySelect" value="1"/>
+  <CostResource index="Minerals" value="50"/>
+  <RepairTime value="20"/>
+  <AttackTargetPriority value="20"/>
+  <DamageDealtXP value="1"/>
+  <DamageTakenXP value="1"/>
+  <KillXP value="10"/>
+  <Radius value="0.375"/>
+  <SeparationRadius value="0.375"/>
+  <InnerRadius value="0.375"/>
+  <CargoSize value="1"/>
+  <ScoreMake value="50"/>
+  <ScoreKill value="50"/>
+  <ScoreResult value="BuildOrder"/>
+  <SubgroupPriority value="15"/>
+  <MinimapRadius value="0.375"/>
+  <PlaneArray index="Ground" value="1"/>
+  <Collide index="Ground" value="1"/>
+  <Collide index="ForceField" value="1"/>
+  <Sight value="9"/>
+  <AbilArray Link="stop"/>
+  <AbilArray Link="attack"/>
+  <AbilArray Link="move"/>
+  <AbilArray Link="Stimpack"/>
+  <CardLayouts>
+    <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+    <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+    <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+    <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+    <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+    <LayoutButtons Face="Stim" Type="AbilCmd" AbilCmd="Stimpack,Execute" Row="2" Column="0"/>
+  </CardLayouts>
+  <Attributes index="Light" value="1"/>
+  <Attributes index="Biological" value="1"/>
+  <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+  <GlossaryCategory value="Unit/Category/TerranUnits"/>
+  <HotkeyCategory value="Unit/Category/TerranUnits"/>
+  <GlossaryPriority value="21"/>
+  <GlossaryStrongArray value="Marauder"/>
+  <GlossaryStrongArray value="Hydralisk"/>
+  <GlossaryStrongArray value="Immortal"/>
+  <GlossaryWeakArray value="SiegeTankSieged"/>
+  <GlossaryWeakArray value="Baneling"/>
+  <GlossaryWeakArray value="Colossus"/>
+  <WeaponArray Link="GuassRifle"/>
+  <Fidget>
+    <ChanceArray index="Anim" value="33"/>
+    <ChanceArray index="Idle" value="33"/>
+    <ChanceArray index="Turn" value="33"/>
+  </Fidget>
+  <TauntDuration index="Cheer" value="5"/>
+  <TauntDuration index="Dance" value="5"/>
+</CUnit>
